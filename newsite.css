@@ -1,0 +1,130 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    background-color: #000000;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #2600ff;
+}
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h1 {
+  font-size: calc(0.5px + 5vh);
+  line-height: calc(0px + 5vh);
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #0004ff, 0 0 15px #0400ff, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #004864;
+  font-family: "Sacramento", cursive;
+  text-align: top;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+}
+.la {
+  color: #ff0000;
+}
+/* title design */
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+/* title design */
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+article h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border-color: #00b7ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #888686;
+}
+
+footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: center;
+}
