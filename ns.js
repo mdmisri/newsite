@@ -22,3 +22,23 @@ const contact = document.querySelector('#contact');
 contact.addEventListener('click', function (){
     window.location.href = 'contact.html'
 })
+
+// side news
+const sidenews = document.querySelector('.side-news');
+
+const newsItems = [
+    { title: 'Lorem ipsum dolor sit amen', link: '#'},
+    { title: 'Consectetur adipiscing elit', link: '#'},
+    { title: 'sed do eiusmod tempor inciddunt', link: '#'},
+    { title: 'Duis aute irure dolor in reprehendeit', link: '#'}
+];
+
+let newsHTML = '';
+newsItems.forEach(item => {
+    newsHTML += `<li><a href="${item.link}">${item.title}</a></li>`;
+});
+
+sidenews.innerHTML =`
+    <h2> Latest News </h2>
+    <ul> ${newsHTML}</ul>
+    `;
