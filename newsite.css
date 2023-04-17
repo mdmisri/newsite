@@ -38,102 +38,123 @@ body{
   background-color: rgb(255, 255, 255);
 }
 /* side news */
-  .side-news {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 600px;
-  }
-  .side-news h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
- .side-news ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(255, 246, 246);
- }
-  .side-news li {
-    margin-bottom: 5px;
-  }
 
-  .side-news li a {
-    color: #333;
-    text-decoration: none;
-  }
-    .side-news li a:hover {
-      background-color: white;
-      text-decoration: underline;
-    }
+
+
 /* sidenews */
 .la {
   color: #ff0000;
 }
 /* title design */
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+
+h1 {
+  position: relative;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: calc(2px + 5vw);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #071ff3;
+  user-select: none;
+  white-space: nowrap;
+  filter: blur(0.007em);
+  animation: shake 3.5s linear forwards;
+}
+
+h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+          clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1::before {
+  animation: crack1 2.5s linear forwards;
+  -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+h1::after {
+  animation: crack2 2.5s linear forwards;
+  -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+          clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+@keyframes shake {
+  5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+      filter: blur(0.018em);
+      transform: translateY(0.018em) rotate(0deg);
   }
 
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
+  10%, 30%, 40%, 50%, 70%, 80%, 90% {
+      filter: blur(0.01em);
+      transform: translateY(-0.018em) rotate(0deg);
+  }
+
+  20%, 60% {
+      filter: blur(0.03em);
+      transform: translate(-0.018em, 0.018em) rotate(0deg);
+  }
+
+  45%, 85% {
+      filter: blur(0.03em);
+      transform: translate(0.018em, -0.018em) rotate(0deg);
+  }
+
   100% {
-/*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
+      filter: blur(0.007em);
+      transform: translate(0) rotate(-0.5deg);
   }
 }
 
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
+@keyframes crack1 {
+  0%, 95% {
+      transform: translate(-50%, -50%);
   }
 
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
   100% {
-/*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
+      transform: translate(-51%, -48%);
+  }
+}
+
+@keyframes crack2 {
+  0%, 95% {
+      transform: translate(-50%, -50%);
+  }
+
+  100% {
+      transform: translate(-49%, -53%);
   }
 }
 /* title design */
 
 article {
+  display:grid;
   background-color: #e4dfdf;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  width: auto;
 }
 
 article h3 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 article p {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 button {
@@ -143,6 +164,19 @@ button {
   border-color: #00b7ff;
   border-radius: 5px;
   cursor: pointer;
+}
+.art {
+  margin-bottom: 20px;
+}
+
+.a {
+  margin-bottom: 10px;
+}
+
+#butto {
+  width: 150px;
+  height: 40px;
+  font-size: smaller;
 }
 
 button:hover {
